@@ -9,6 +9,13 @@ div.content {
     height: calc(100vh - 300px);
   }
 }
+.description {
+  width: 1000px;
+  margin: auto;
+  line-height: 17px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
 @media (max-width: 1120px) {
   .s {
     border: none !important;
@@ -17,6 +24,11 @@ div.content {
     outline: unset !important;
     width: 100%;
   }
+  .description {
+    width: 100%;
+    margin-left: 30px;
+  }
+
   div.content {
     width: 100%;
     max-width: unset !important;
@@ -48,4 +60,12 @@ div.content {
     width: 240px !important;
     height: 50px !important;
   }
+  .description {
+    height: 150px;
+    overflow-Y: scroll;
+  }
+  .main {
+    padding-bottom: 20px;
+  }
 }
+
