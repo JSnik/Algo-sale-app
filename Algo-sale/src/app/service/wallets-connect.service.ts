@@ -20,7 +20,7 @@ export class WalletsConnectService {
 
   constructor(private router: Router, private route: ActivatedRoute) {
     if (localStorage.getItem('wallet')) {
-      sessionStorage.setItem('acct-list', JSON.stringify([localStorage.getItem('wallet')]));
+      sessionStorage.setItem('acct-list', JSON.stringify([localStorage.getItem('wallet')!]));
         if (this.sessionWallet === undefined || !this.sessionWallet) {
           this.connectOnDefault('my-algo-connect').then(response => response);
         }
@@ -40,7 +40,7 @@ export class WalletsConnectService {
     let index = localStorage.getItem('walletIndex');
     let finalIndex = +index!;
     if (localStorage.getItem('walletsOfUser')) {
-      localStorage.setItem('wallet', JSON.stringify(JSON.parse(localStorage.getItem('walletsOfUser')!)[finalIndex]));
+      localStorage.setItem('wallet', JSON.parse(localStorage.getItem('walletsOfUser')!)[finalIndex]);
     } else {
       localStorage.setItem('wallet', this.myAlgoAddress[finalIndex]);
     }
@@ -92,11 +92,11 @@ export class WalletsConnectService {
     let index = localStorage.getItem('walletIndex');
     let finalIndex = +index!;
     if (localStorage.getItem('walletsOfUser')) {
-      localStorage.setItem('wallet', JSON.stringify(JSON.parse(localStorage.getItem('walletsOfUser')!)[finalIndex]));
+      localStorage.setItem('wallet', JSON.parse(localStorage.getItem('walletsOfUser')!)[finalIndex]);
     } else {
       localStorage.setItem('wallet', this.myAlgoAddress[finalIndex]);
     }
-    this.myAlgoName = this.myAlgoAddress.map((value: { name: any; }) => value.name)
+    this.myAlgoName = this.myAlgoAddress.map((value: { name: any; }) => {return value.name})
 
     sw.wallet.defaultAccount = finalIndex;
     const finalSw = sw;
