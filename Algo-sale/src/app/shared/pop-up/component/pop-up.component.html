@@ -1,0 +1,44 @@
+<div class="main">
+  <div class="wrapper wrapper-border" style="max-height: calc(100vh - 20px); min-height: 300px;">
+    <button class="btn-default btn-default close" (click)="closePopUp(false)">
+      <i class="fa fa-close"></i>
+    </button>
+<!--stacking-->
+  <!--#stacking-->
+    <div class="wallet-side" *ngIf="openWallet && !isDeploy">
+      <div class="row" style="width: 100%">
+        <div class="col-md-6">
+          <div class="wallet-section">
+            <img src="https://docs.walletconnect.com/img/walletconnect-logo.svg" alt="">
+            <span>WalletConnect</span>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div
+            class="wallet-section"
+            (click)="setelectWalletConnect('MyAlgoWallet')"
+          >
+            <img src="https://ml.globenewswire.com/Resource/Download/abe9938b-0ff0-4d09-8f8e-da43ca142899?size=2" alt="">
+            <span>MyAlgoWallet</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <ng-container *ngIf="switcher">
+      <h3 style="text-align: center; margin-bottom: 30px; color: #81007F">Switch Your Wallet</h3>
+      <div class="context-section">
+<!--          <h2 *ngFor="let acc of wallet(); let i = index" [class.color-violet]="getActive(acc)" (click)="switchAcc(i)"> {{returnAddress(acc)}}</h2>-->
+        <app-drop-down-selector
+          [isNotAccordion]="false"
+          [dropDownValues]="wallet()"
+          (switcherEmit)="getValueFromDropDown($event)"
+          [widthPX]="'330px'"
+          [isSwitcher]="true"
+          [isTradeBinded]="true"
+        >
+        </app-drop-down-selector>
+      </div>
+    </ng-container>
+
+  </div>
+</div>

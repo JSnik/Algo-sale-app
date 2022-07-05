@@ -1,0 +1,321 @@
+.main {
+  position: fixed;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  background: rgba(28, 28, 30, 0.4);
+  z-index: 9999;
+
+  .launch-detail-version {
+    display: flex;
+    justify-content: space-between;
+
+    h3 {
+      font-size: 18px;
+    }
+  }
+
+  .wrapper {
+    padding: 45px !important;
+    border-radius: 24px;
+    background: #fff;
+    border: 1px solid #81007f;
+    width: fit-content;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+
+    .close {
+      position: absolute;
+      right: 15px;
+      top: 9px;
+      color: #1c1c1e;
+      font-size: 30px;
+    }
+
+    .title {
+      h3 {
+        text-align: center;
+        line-height: 0px;
+      }
+    }
+    .pre-title {
+      margin-top: 25px;
+    }
+    .wallet-side {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 40px;
+
+      span {
+        text-align: center;
+      }
+
+      .wallet-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #e8e8e9;
+        padding: 5px 20px;
+        transition: 0.3s;
+        cursor: pointer;
+
+        &:hover {
+          border: 1px solid #81007f;
+          transform: scale(1.05);
+        }
+        img {
+          width: 100px;
+          height: 100px;
+        }
+      }
+    }
+  }
+}
+.isNotWallet {
+  .input-section {
+    display: flex;
+    flex-direction: column;
+    span {
+      margin-bottom: 5px;
+      margin-left: 8px;
+    }
+  }
+  .buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    button {
+      width: 140px;
+    }
+  }
+}
+// isTrade Styles
+
+.paragraph {
+  margin-top: 40px;
+  max-width: 400px;
+
+  p {
+    &:last-child {
+      margin-top: 20px;
+    }
+  }
+}
+
+.data-box {
+  margin: 2px 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  .property {
+    color: #81007f;
+    margin-bottom: 5px;
+    margin-right: 10px;
+  }
+  .value {
+    margin-left: 4px;
+  }
+}
+
+.isTrade-buttons {
+  align-items: center;
+  justify-content: flex-end;
+
+  button {
+    margin: 2px 5px;
+  }
+}
+// isTrade Styles
+
+// isRestart Styles
+
+// .inputs-container {
+// margin: 20px 0;
+// }
+
+.input-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  input {
+    max-width: 200px;
+    margin: 5px 0 5px 15px;
+    border: 1px solid #81007f8a;
+    background-color: rgba(128, 128, 128, 0.09);
+    border-radius: 5px;
+    height: 28px;
+    outline: none;
+    padding: 0 8px;
+
+    &:focus {
+      border: 1px solid rgba($color: #81007fd8, $alpha: 0.7);
+      box-shadow: rgba($color: #81007fd8, $alpha: 0.7) 0px 0px 3px;
+      background-color: transparent;
+    }
+  }
+}
+
+// .isBorrow-version {
+  .borrow-active-container {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 45px;
+
+  .input-box {
+    margin: 10px 0;
+    input {
+      max-width: 100%;
+    }
+  }
+}
+
+.isBacking-version {
+}
+
+// isRestart Styles
+
+.wallet-side {
+  img {
+    width: 100%;
+  }
+}
+.deploy-width {
+  width: 340px;
+}
+@media (max-width: 580px) {
+}
+.stacking {
+  .input-costum {
+    width: 50%;
+    height: 40px;
+  }
+  .pretitle {
+    margin-top: 15px;
+  }
+  .first {
+    margin-bottom: 15px;
+    margin-top: 40px;
+  }
+  .second {
+    margin-top: 40px;
+    position: relative;
+    .txt{
+      position: absolute;
+      top: -14px;
+      right: 8px;
+      font-size: 12px;
+    }
+  }
+  .buttons {
+    margin-top: 20px;
+    button {
+      width: 140px;
+    }
+  }
+}
+
+.blockchain-wrapper {
+  .top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      width: 160px;
+    }
+  }
+  .bottom {
+    div {
+      h3 {
+        text-align: center;
+        margin-top: 25px;
+        font-size: 32px;
+        color: #81007F;
+      }
+    }
+  }
+}
+.rows {
+  display: flex;
+  flex-wrap: wrap;
+}
+.restyle-md {
+  width: 100%;
+}
+.assets-section {
+  height: 200px !important;
+  overflow-y: scroll !important;
+  margin-bottom: 20px;
+}
+
+.w {
+  width: 60% !important;
+}
+
+
+///
+.pool {
+  div {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    h4 {
+      margin-bottom: 5px;
+      margin-left: 5px;
+    }
+  }
+  .createoffer {
+    margin-bottom: 20px;
+    input {
+      width: 100%;
+    }
+  }
+  .info-box {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 15px;
+    flex-direction: unset;
+    h6 {
+      display: block;
+    }
+    &:last-child {
+      margin: 0px;
+    }
+  }
+}
+.context-section {
+  h2 {
+    cursor: pointer;
+    transition: 0.3s;
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+}
+ @media (max-width: 490px) {
+   .main {
+     .wrapper {
+       padding: 20px !important;
+     }
+   }
+ }
+
+@media (max-width: 403px) {
+  h3 {
+    font-size: 17px !important;
+  }
+  .main {
+    .wrapper {
+      .close {
+        right: 5px;
+        top: -15px;
+      }
+    }
+  }
+}
